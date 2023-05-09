@@ -2,7 +2,7 @@ const Router = require('express').Router
 
 const router = Router()
 
-router.get('/',(req, res)=>{
+router.get('/',function(req, res){
 
     res.render('notes/create')
 

@@ -1,1 +1,13 @@
-<h1>View de create</h1>
+<a href="/"></a>
+<h2>adicione uma nota</h2>
+<form action="/notes" method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Titulo:</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="De um titulo a sua tarefa">
+    </div>
+    <div class="mb-3">
+        <label for="title" class="form-label">Descrição:</label>
+        <textarea class="form-control" name="description" id="description" placeholder="Descreva com detalhes sua tarefa" ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Criar nota</button>
+</form>
