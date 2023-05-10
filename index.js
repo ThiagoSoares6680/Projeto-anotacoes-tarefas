@@ -30,7 +30,7 @@ app.get('/', (req,res) => {
 
 app.use('/notes', notesRoutes)
 
-db.initDb((err,db)=> {
+db.initDb((err, db)=> {
     if(err){
         console.log(err)
     }else{
