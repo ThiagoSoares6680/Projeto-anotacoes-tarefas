@@ -27,4 +27,19 @@ router.post('/', function(req, res){
     res.redirect(301,'/')
 })
 
+// Remocao de tarefas
+
+router.post('/delete', function(req, res){
+
+    const data = req.body
+    const id = new ObjectID(data.id)
+
+    db.getDb()
+        .db()
+        .collection('notes')
+        .deleteOne({_id: id})
+
+    res.redirect(301, '/')
+})
+
 module.exports = router
