@@ -42,4 +42,14 @@ router.post('/delete', function(req, res){
     res.redirect(301, '/')
 })
 
+// view da tarefa
+
+router.get('/:id', async function(req, res){
+
+    const id = new ObjectID(req.params.id)
+    const note = await db.getDb().db().collection('notes').findOne({_id:id})
+
+    res.render('notes/detail',{ note })
+})
+
 module.exports = router
